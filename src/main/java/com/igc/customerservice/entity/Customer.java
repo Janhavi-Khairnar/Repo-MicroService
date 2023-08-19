@@ -11,7 +11,6 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "customer")
 public class Customer {
@@ -24,4 +23,17 @@ public class Customer {
 
     @OneToMany(cascade = CascadeType.ALL)
     public List<Orders> ordersList;
+
+    public Customer(int cid, String cname, String phoneNo) {
+        this.cid = cid;
+        this.cname = cname;
+        this.phoneNo = phoneNo;
+    }
+
+    public Customer(int cid, String cname, String phoneNo, List<Orders> ordersList) {
+        this.cid = cid;
+        this.cname = cname;
+        this.phoneNo = phoneNo;
+        this.ordersList = ordersList;
+    }
 }
