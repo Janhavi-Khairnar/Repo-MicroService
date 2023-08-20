@@ -23,4 +23,9 @@ public class CustomerController {
     public List<Customer> showCustomer() {
         return customerRepo.findAll();
     }
+
+    @GetMapping("getcustomerbyid/{cid}")
+    public  Customer getcustomerbyid(@PathVariable ("cid") int cid) {
+        return customerRepo.findById(cid).get();
+    }
 }

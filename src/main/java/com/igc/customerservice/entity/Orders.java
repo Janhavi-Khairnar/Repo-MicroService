@@ -19,7 +19,7 @@ public class Orders {
     private String items;
     private int amount;
     private int cid;
-    
+
     //@ManyToOne
     //@JoinColumn(name = "cid")
     //private Customer customer;
