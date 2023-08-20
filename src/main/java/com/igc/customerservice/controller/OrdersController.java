@@ -19,4 +19,13 @@ public class OrdersController {
         return orderRepo.save(orders);
     }
 
+    @GetMapping("/getorderbyid/{oid}")
+    public Orders getorderbyid(@PathVariable ("oid") int oid) {
+        return orderRepo.findById(oid).get();
+    }
+
+    @GetMapping("/findOrdersByCid/{custid}")
+    public List<Orders> findOrdersByCid(@PathVariable ("custid") int custid) {
+        return orderRepo.findOrdersByCid(custid);
+    }
 }
