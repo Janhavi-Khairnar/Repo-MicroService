@@ -18,8 +18,12 @@ public class Orders {
     private String date;
     private String items;
     private int amount;
+    private int cid;
+    
+    //@ManyToOne
+    //@JoinColumn(name = "cid")
+    //private Customer customer;
 
-    @ManyToOne
-    @JoinColumn(name = "cid")
-    private Customer customer;
+
+
 }
