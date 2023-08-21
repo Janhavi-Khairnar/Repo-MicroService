@@ -40,7 +40,7 @@ public class CustomerController {
 
         //http://localhost:8002/orders/api/findOrdersByCid/2
 
-        List<Orders> ordersList = restTemplate.getForObject("http://localhost:8002/orders/api/findOrdersByCid/"+cid, List.class);
+        List<Orders> ordersList = restTemplate.getForObject("http://order-service/orders/api/findOrdersByCid/"+cid, List.class);
 
         customer.setOrdersList(ordersList);
 
